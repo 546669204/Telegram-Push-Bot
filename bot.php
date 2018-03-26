@@ -114,7 +114,7 @@ function sendmessage($data){
 	go_curl("https://api.telegram.org/bot$token/sendMessage","POST",$data);
 }
 //file_put_contents("text.txt",file_get_contents("php://input")."\n\n\n",FILE_APPEND); //debug output
-if ($_POST["method"] == "send"){
+if (isset($_POST["method"]) && $_POST["method"] == "send"){
 	$data = [];
 	$data["chat_id"] = authcode($_POST["sckey"]);
 	$data["text"] = $_POST["content"];
