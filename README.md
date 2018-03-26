@@ -14,7 +14,7 @@
 
 5.replace the `token` in bot.php
 
-6.set web hook : access this url  (https://api.telegram.org/bot[Token]/setWebhook?url=http://[domain]/bot.php)
+6.set web hook : access this url  (https://api.telegram.org/bot[Token]/setWebhook?url=https://[domain]/bot.php)
 
 7.begin use
 
