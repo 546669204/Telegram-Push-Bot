@@ -1,6 +1,4 @@
 <?php
-$token = "";
-
 function go_curl($url, $type, $data = false, &$err_msg = null, $timeout = 20, $cert_info = array(),$proxy = "",$cookie = "recookie.txt"){
 	$type = strtoupper($type);
 	if ($type == 'GET' && is_array($data)) {
@@ -111,7 +109,7 @@ function authcode($string,$operation='DECODE',$key='',$expiry=0){
 	}
 }
 function sendmessage($data){
-	go_curl("https://api.telegram.org/bot$token/sendMessage","POST",$data);
+	go_curl("https://api.telegram.org/bot[token]/sendMessage","POST",$data);
 }
 //file_put_contents("text.txt",file_get_contents("php://input")."\n\n\n",FILE_APPEND); //debug output
 if (isset($_POST["method"]) && $_POST["method"] == "send"){
